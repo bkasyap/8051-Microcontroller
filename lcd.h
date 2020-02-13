@@ -38,3 +38,18 @@ void string_lcd(unsigned char *str)	   // function to display string to lcd
 		 str++;
 	 }
  }
+
+void number_lcd(unsigned int dat, unsigned int siz)      // function to display any digit decimal value to lcd
+{
+unsigned int temp,temparr[10];
+
+for(temp=siz;temp>0;temp--)
+        {
+                temparr[temp-1]=dat%10;
+                dat=dat/10;
+        }
+for(temp=0;temp<siz;temp++)
+        {
+                data_lcd(temparr[temp]+0x30);
+        }        
+}
