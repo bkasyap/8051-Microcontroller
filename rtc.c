@@ -1,11 +1,11 @@
 #include<reg51.h>
 #include<intrins.h>
 #define DATA  P2
-sbit RS = P0^0;
-sbit E = P0^1;
+sbit RS = P1^0;
+sbit E = P1^1;
 
-sbit SCL=P1^0;	
-sbit SDA=P1^1;
+sbit SCL=P0^0;	
+sbit SDA=P0^1;
 
 #include<delay.h>
 #include<lcd.h>
